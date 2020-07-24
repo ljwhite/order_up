@@ -9,9 +9,9 @@ RSpec.describe "As a visitor" do
       @ingredient2 = Ingredient.create!(name: "Ground Beef", calories: 120)
       @ingredient3 = Ingredient.create!(name: "Pasta", calories: 80)
 
-      @dish1.dish_ingredient.create(ingredient: @ingredient1)
-      @dish1.dish_ingredient.create(ingredient: @ingredient2)
-      @dish1.dish_ingredient.create(ingredient: @ingredient3)
+      @dish1.dish_ingredients.create(ingredient: @ingredient1)
+      @dish1.dish_ingredients.create(ingredient: @ingredient2)
+      @dish1.dish_ingredients.create(ingredient: @ingredient3)
 
     end
     it "I see the list of ingredients and the chef who makes it" do
