@@ -24,5 +24,11 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content(@ingredient3.name)
 
     end
+
+    it "I also see the total calorie count for that dish" do
+      visit "/dishes/#{@dish1.id}"
+
+      expect(page).to have_content("Total Calories: 300")
+    end
   end
 end
